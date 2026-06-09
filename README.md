@@ -1,136 +1,145 @@
-# SafeWatch
+# BeSafe – Campus Safety Mobile Application
 
 ## Overview
 
-SafeWatch is a real-time emergency reporting and dispatch platform designed to improve community safety by connecting residents directly with the appropriate emergency responders.
+BeSafe is a real-time campus safety mobile application designed to improve emergency communication between students, campus security, and administrators. It provides fast SOS alerts, incident reporting, SafeWalk navigation, and real-time safety monitoring using location-based services and intelligent risk analysis.
 
-The system enables residents to report emergencies using GPS location data, while responders receive automated alerts based on incident type, area code, and specialization. SafeWatch streamlines emergency response through intelligent routing, live communication, escalation protocols, and administrative analytics.
+The system aims to reduce emergency response time and create a safer university environment through instant communication and geolocation tracking.
 
-## Mission
+---
 
-To provide eThekwini Municipality with a real-time intelligence and emergency dispatch platform that directly connects community residents to the exact responders who can help them.
+##  Project Objectives
 
-## Features
+- Improve campus emergency response time
+- Provide real-time SOS alert system
+- Enable location-based incident reporting
+- Enhance communication between students and security
+- Identify high-risk campus zones using data analysis
 
-### Resident Features
+---
 
-* User registration and authentication
-* Emergency incident reporting
-* GPS location pinning
-* Anonymous crime reporting
-* Incident tracking
-* Communication with responders
-* Community incident calendar
+##  Target Users
 
-### Responder Features
+- Students (primary users)
+- Campus Security Personnel
+- University Administrators
+- Visitors and staff
 
-* Secure login system
-* Duty Lock (Clock In / Clock Out)
-* Area-specific incident feed
-* Incident dispatch management
-* Live communication logs
-* Internal responder notes
-* Emergency escalation protocol
+---
 
-### Administrator Features
+##  Key Features
 
-* System-wide analytics dashboard
-* Incident management and moderation
-* Bulk responder account creation
-* Emergency email broadcasts
-* PDF report generation
-* Community activity monitoring
+### Student Features
+- SOS emergency alert system
+- SafeWalk navigation assistance
+- Incident reporting with images
+- Real-time location sharing
+- Safety notifications
 
-## Core Functionalities
+### Security Features
+- Live emergency incident feed
+- Dispatch and response management
+- Incident tracking and updates
+- Mark incidents as resolved
+- Real-time monitoring dashboard
 
-### Smart Dispatch System
+### Admin Features
+- User management
+- System analytics dashboard
+- Campus-wide safety broadcasts
+- Incident overview reports
 
-SafeWatch automatically routes incident alerts to the correct responders based on:
+---
 
-* Incident category
-* Area code
-* Responder specialization
-* Duty status
+##  Intelligent Features
 
-### GPS-Based Reporting
+- Risk Zone generation using spatial clustering
+- Real-time incident-based heat mapping
+- Location-aware emergency routing
 
-Residents can drop a digital pin on the map to provide precise emergency locations.
+---
 
-### Live Communication
+##  System Architecture
 
-Residents and responders can communicate through a secure, timestamped communication log.
+- **Frontend:** Android (Java, Android SDK)
+- **Backend:** Supabase (PostgreSQL, Authentication, Storage)
+- **Communication:** REST API using Retrofit
+- **Real-time updates:** Supabase Realtime Database
 
-### Escalation Protocol
+---
 
-Responders can escalate incidents when additional support is required, automatically notifying nearby units.
+##  Technologies Used
 
-### Analytics & Reporting
+- Java (Android Development)
+- Android SDK
+- Supabase (Backend-as-a-Service)
+- PostgreSQL
+- Google Maps SDK
+- Google Directions API
+- Google FusedLocationProvider API
+- Material Design Components
+- Glide (Image Loading)
+- OneSignal (Push Notifications)
 
-Administrators can monitor incident trends through charts, calendars, and downloadable PDF reports.
+---
 
-## Technology Stack
+##  APIs & Services
 
-### Backend
+- Google Maps SDK – Campus mapping and visualization
+- Google Directions API – SafeWalk routing
+- FusedLocationProvider – GPS tracking
+- OneSignal – Push notifications and alerts
 
-* Python 3
-* Flask
-* Flask-Login
-* Flask-WTF
-* SQLAlchemy
-* SQLite
-* Flask-Mail
-* FPDF
+---
 
-### Frontend
+##  Architecture
 
-* HTML5
-* CSS3
-* JavaScript
+- MVVM architecture pattern
+- Modular package structure
+- RESTful API integration
+- Role-Based Access Control (Student / Security / Admin)
 
-### Libraries & APIs
+---
 
-* Leaflet.js
-* OpenStreetMap Nominatim API
-* FullCalendar.js
-* Chart.js
+##  Testing
 
-## Database Design
+- Integration testing with Supabase backend
+- Role-Based Access Control (RBAC) testing
+- Performance testing using pagination optimization
+- Real-time SOS and reporting validation
 
-The system uses a relational database structure consisting of:
+---
 
-* User
-* Incident
-* AreaCode
+##  Scrum Methodology
 
-Relationships are managed using SQLAlchemy and Foreign Keys to ensure secure ownership and traceability of incidents.
+### Sprint 1
+- Authentication and login system
 
-## Project Architecture
+### Sprint 2
+- Emergency SOS and dispatch workflow
 
-1. Resident submits emergency report.
-2. System identifies incident type and area code.
-3. Appropriate responders receive automated email alerts.
-4. Responder dispatches to incident.
-5. Communication occurs through the live log.
-6. Incident is resolved or escalated.
-7. Incident is archived for reporting and analytics.
+### Sprint 3
+- Profile management and media uploads
 
-## Future Improvements
+---
 
-* Mobile application integration
-* Real-time push notifications
-* SMS emergency alerts
-* AI-powered incident prioritization
-* Live responder tracking
-* Multi-language support
+##  Project Structure
 
-## Author
+- Activities: Login, Register, Alerts, Reports
+- Fragments: Map, Reports, Dashboard
+- Models: Data transfer objects
+- Network: Retrofit API services
 
-**Thobani Alex Shezi**
+---
 
-Advanced Diploma in ICT – Application Development
+##  Conclusion
 
+BeSafe is a smart campus safety system that improves emergency response times through real-time SOS alerts, location tracking, and structured communication between students and security personnel. The system uses intelligent mapping and role-based access control to ensure efficient and secure incident management.
+
+---
+
+##  Developer
+
+Thobani Alex Shezi  
+Advanced Diploma in ICT  
 Durban University of Technology
-
-## License
-
-This project is developed for educational and portfolio purposes.
