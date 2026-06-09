@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_live_feed"
+        android:icon="@android:drawable/ic_dialog_alert"
+        android:title="Live Feed" />
+
+    <!-- NEW: The 3rd tab for the unified Reports Calendar -->
+    <item
+        android:id="@+id/nav_reports_calendar"
+        android:icon="@android:drawable/ic_menu_today"
+        android:title="Reports" />
+
+    <item
+        android:id="@+id/nav_archive"
+        android:icon="@android:drawable/ic_menu_recent_history"
+        android:title="Archive" />
+</menu>

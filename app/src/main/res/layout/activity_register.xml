@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bs_bg_page"
+    android:fillViewport="true"
+    android:fadeScrollbars="false"
+    android:scrollbarStyle="outsideOverlay">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        android:paddingTop="48dp"
+        android:paddingBottom="40dp"
+        android:gravity="center_horizontal">
+
+        <!-- Step indicator -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="32dp"
+            android:padding="8dp">
+
+            <!-- Step 1 - Active -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="32dp"
+                android:layout_height="6dp"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#E03535"
+                android:layout_marginEnd="6dp"/>
+
+            <!-- Step 2 - Inactive -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/bs_card_border"/>
+        </LinearLayout>
+
+        <!-- Header -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Create Account"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/bs_text_primary"
+            android:letterSpacing="0.02"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Join the BeSafe campus network"
+            android:textSize="14sp"
+            android:textColor="@color/bs_text_muted"
+            android:lineSpacingExtra="4sp"
+            android:layout_marginBottom="36dp"/>
+
+        <!-- Full Name -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilRegName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:hint="Full Name"
+            app:startIconDrawable="@android:drawable/ic_menu_edit"
+            app:startIconTint="@color/bs_text_muted"
+            app:boxStrokeColor="@color/bs_card_border"
+            app:boxStrokeWidth="1.5dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:boxBackgroundColor="@color/bs_card_bg"
+            app:hintTextColor="@color/bs_text_muted"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            android:elevation="1dp"
+            android:stateListAnimator="@null">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRegName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:textColor="@color/bs_text_primary"
+                android:textSize="15sp"
+                android:paddingStart="8dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Campus Email -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilRegEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:hint="Campus Email Address"
+            app:startIconDrawable="@android:drawable/ic_dialog_email"
+            app:startIconTint="@color/bs_text_muted"
+            app:boxStrokeColor="@color/bs_card_border"
+            app:boxStrokeWidth="1.5dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:boxBackgroundColor="@color/bs_card_bg"
+            app:hintTextColor="@color/bs_text_muted"
+            app:helperText="e.g. 21900000@dut4life.ac.za"
+            app:helperTextTextColor="@color/bs_text_muted"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            android:elevation="1dp"
+            android:stateListAnimator="@null">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRegEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/bs_text_primary"
+                android:textSize="15sp"
+                android:paddingStart="8dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilRegPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:hint="Create Password"
+            app:startIconDrawable="@android:drawable/ic_lock_idle_lock"
+            app:startIconTint="@color/bs_text_muted"
+            app:endIconMode="password_toggle"
+            app:endIconTint="@color/bs_text_muted"
+            app:boxStrokeColor="@color/bs_card_border"
+            app:boxStrokeWidth="1.5dp"
+            app:boxStrokeWidthFocused="2dp"
+            app:boxBackgroundColor="@color/bs_card_bg"
+            app:hintTextColor="@color/bs_text_muted"
+            app:helperText="Minimum 8 characters"
+            app:helperTextTextColor="@color/bs_text_muted"
+            app:boxCornerRadiusTopStart="12dp"
+            app:boxCornerRadiusTopEnd="12dp"
+            app:boxCornerRadiusBottomStart="12dp"
+            app:boxCornerRadiusBottomEnd="12dp"
+            android:elevation="1dp"
+            android:stateListAnimator="@null">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etRegPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:textColor="@color/bs_text_primary"
+                android:textSize="15sp"
+                android:paddingStart="8dp"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Password strength indicator -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginBottom="32dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="4dp"
+                android:orientation="horizontal"
+                android:background="@color/bs_card_border"
+                android:alpha="0.3">
+
+                <View
+                    android:id="@+id/vPasswordStrengthBar"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0"
+                    android:background="#E03535"/>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvPasswordStrength"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="11sp"
+                android:textColor="@color/bs_text_muted"
+                android:layout_marginTop="6dp"
+                android:minHeight="16dp"/>
+        </LinearLayout>
+
+        <!-- Sign Up Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegister"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Continue"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:letterSpacing="0.05"
+            app:backgroundTint="#E03535"
+            app:cornerRadius="16dp"
+            app:rippleColor="#CC2B2B"
+            android:elevation="2dp"
+            android:stateListAnimator="@null"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Login Link -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Already have an account? "
+                android:textSize="14sp"
+                android:textColor="@color/bs_text_muted"/>
+
+            <TextView
+                android:id="@+id/tvGoToLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sign In"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#E03535"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="4dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

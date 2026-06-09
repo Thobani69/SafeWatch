@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- BeSafe: Page & surface (LIGHT MODE) -->
+    <color name="bs_bg_page">#F8F9FA</color>
+    <color name="bs_card_bg">#FFFFFF</color>
+    <color name="bs_card_border">#E9ECEF</color>
+    <color name="bs_icon_bg">#F1F3F5</color>
+
+    <!-- BeSafe: Text (LIGHT MODE) -->
+    <color name="bs_text_primary">#212529</color>
+    <color name="bs_text_secondary">#495057</color>
+    <color name="bs_text_muted">#ADB5BD</color>
+
+    <!-- BeSafe: SOS rings (LIGHT MODE) -->
+    <color name="bs_sos_hint">#E9ECEF</color>
+    <color name="bs_sos_ring_outer">#FFE3E3</color>
+    <color name="bs_sos_ring_mid">#FFC9C9</color>
+
+    <!-- BeSafe: Report card blue (LIGHT MODE) -->
+    <color name="bs_report_bg">#E7F5FF</color>
+    <color name="bs_report_border">#D0EBFF</color>
+    <color name="bs_report_icon_bg">#A5D8FF</color>
+    <color name="bs_report_icon">#1C7ED6</color>
+    <color name="bs_report_title">#1864AB</color>
+    <color name="bs_report_sub">#74C0FC</color>
+
+    <!-- BeSafe: Control button red (LIGHT MODE) -->
+    <color name="bs_contact_red_bg">#FFF5F5</color>
+    <color name="bs_contact_red_border">#FFE3E3</color>
+    <color name="bs_contact_red_icon_bg">#FFC9C9</color>
+    <color name="bs_contact_red_icon">#E03131</color>
+    <color name="bs_contact_red_title">#C92A2A</color>
+    <color name="bs_contact_red_sub">#FFA8A8</color>
+
+    <!-- BeSafe: WhatsApp button green (LIGHT MODE) -->
+    <color name="bs_contact_grn_bg">#EBFBEE</color>
+    <color name="bs_contact_grn_border">#D3F9D8</color>
+    <color name="bs_contact_grn_icon_bg">#B2F2BB</color>
+    <color name="bs_contact_grn_icon">#2B8A3E</color>
+    <color name="bs_contact_grn_title">#236B32</color>
+    <color name="bs_contact_grn_sub">#8CE99A</color>
+
+    <!-- BeSafe: SAPS button blue (LIGHT MODE) -->
+    <color name="bs_contact_blu_bg">#E3FAFC</color>
+    <color name="bs_contact_blu_border">#C5F6FA</color>
+    <color name="bs_contact_blu_icon_bg">#99E9F2</color>
+    <color name="bs_contact_blu_icon">#0B7285</color>
+    <color name="bs_contact_blu_title">#08505E</color>
+    <color name="bs_contact_blu_sub">#3BC9DB</color>
+
+    <!-- BeSafe: Clinic button amber (LIGHT MODE) -->
+    <color name="bs_contact_amb_bg">#FFF9DB</color>
+    <color name="bs_contact_amb_border">#FFF3BF</color>
+    <color name="bs_contact_amb_icon_bg">#FFEC99</color>
+    <color name="bs_contact_amb_icon">#E67700</color>
+    <color name="bs_contact_amb_title">#D9480F</color>
+    <color name="bs_contact_amb_sub">#FFD43B</color>
+</resources>

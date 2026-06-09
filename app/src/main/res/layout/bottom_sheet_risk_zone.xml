@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/bottom_sheet_risk_zone"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:elevation="16dp"
+    android:orientation="vertical"
+    android:padding="24dp"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+    <!-- Drag Handle -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="16dp"
+        android:background="#E0E0E0" />
+
+    <!-- Threat Level Badge & Zone Name -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card_threat_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#DC3545"
+            app:cardCornerRadius="4dp"
+            app:strokeWidth="0dp">
+
+            <TextView
+                android:id="@+id/tv_threat_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:paddingVertical="4dp"
+                android:text="HIGH THREAT"
+                android:textColor="#FFFFFF"
+                android:textSize="12sp"
+                android:textStyle="bold" />
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/tv_zone_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:text="Dynamic Hotspot"
+            android:textColor="#212529"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginVertical="16dp"
+        android:background="#EEEEEE" />
+
+    <!-- AI Stats -->
+    <TextView
+        android:id="@+id/tv_incident_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⚠️ Based on multiple incidents."
+        android:textColor="#495057"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_dominant_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="🔍 Mostly: Multiple SOS Alerts"
+        android:textColor="#495057"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tv_zone_trend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="24dp"
+        android:text="📈 Trend: Increasing"
+        android:textColor="#495057"
+        android:textSize="14sp" />
+
+    <!-- ✅ RENAMED: "Get Safe Route" → "SafeWalk Guide" -->
+    <!-- This better reflects what the feature does: it starts a monitored
+         walk to your destination with a safety timer, not a GPS route. -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_safe_route"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="🚶 Start SafeWalk Guide"
+        android:textSize="15sp"
+        app:cornerRadius="8dp"
+        app:icon="@android:drawable/ic_menu_mylocation" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_safety_timer"
+        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="8dp"
+        android:text="⏱ Start Safety Timer Only"
+        android:textSize="15sp"
+        app:cornerRadius="8dp"
+        app:icon="@android:drawable/ic_menu_recent_history" />
+
+</LinearLayout>

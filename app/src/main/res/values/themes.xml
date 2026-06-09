@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.BeSafe" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- App-Wide Background Color (Automatically swaps light/dark) -->
+        <item name="android:windowBackground">@color/bs_bg_page</item>
+
+        <!-- App-Wide Text Colors (Automatically swaps light/dark) -->
+        <item name="android:textColorPrimary">@color/bs_text_primary</item>
+        <item name="android:textColorSecondary">@color/bs_text_secondary</item>
+
+    </style>
+
+    <style name="Theme.BeSafe" parent="Base.Theme.BeSafe" />
+</resources>

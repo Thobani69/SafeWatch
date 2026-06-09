@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bs_bg_page"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="28dp"
+        android:gravity="center_horizontal">
+
+        <!-- Step indicator dots -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="36dp"
+            android:layout_marginBottom="28dp">
+
+            <!-- Step 1 = done -->
+            <View
+                android:layout_width="6dp"
+                android:layout_height="6dp"
+                android:background="@color/bs_card_border"
+                android:layout_marginEnd="6dp"/>
+            <!-- Step 2 = active (wide pill) -->
+            <View
+                android:layout_width="24dp"
+                android:layout_height="6dp"
+                android:background="#E03535"/>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Complete Your Profile"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="@color/bs_text_primary"
+            android:layout_marginBottom="8dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A few more details to secure your campus account"
+            android:textSize="13sp"
+            android:textColor="@color/bs_text_muted"
+            android:layout_marginBottom="32dp"/>
+
+        <!-- Student Number -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilProfileStudentNumber"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Student Number"
+            app:startIconDrawable="@android:drawable/ic_menu_edit"
+            app:startIconTint="@color/bs_text_muted"
+            app:boxStrokeColor="@color/bs_card_border"
+            app:boxBackgroundColor="@color/bs_card_bg"
+            app:hintTextColor="@color/bs_text_muted"
+            app:helperText="8-digit number, e.g. 21900000"
+            app:counterEnabled="true"
+            app:counterMaxLength="8">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etProfileStudentNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:maxLength="8"
+                android:textColor="@color/bs_text_primary"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Phone Number — SA format with +27 prefix label -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Phone Number (For Emergencies)"
+            android:textSize="11sp"
+            android:textColor="@color/bs_text_muted"
+            android:layout_marginBottom="4dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <!-- +27 prefix box -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="56dp"
+                android:layout_marginEnd="8dp"
+                app:cardBackgroundColor="@color/bs_card_bg"
+                app:cardCornerRadius="4dp"
+                app:cardElevation="0dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/bs_card_border">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="+27"
+                    android:gravity="center"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/bs_text_muted"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Phone number input -->
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilProfilePhone"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="81 234 5678"
+                app:boxStrokeColor="@color/bs_card_border"
+                app:boxBackgroundColor="@color/bs_card_bg"
+                app:hintTextColor="@color/bs_text_muted">
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etProfilePhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:textColor="@color/bs_text_primary"/>
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvPhoneError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter a valid SA mobile number (e.g. 0812345678)"
+            android:textSize="11sp"
+            android:textColor="#E03535"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone"/>
+
+        <!-- Gender Dropdown -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilProfileGender"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:hint="Gender"
+            app:boxStrokeColor="@color/bs_card_border"
+            app:boxBackgroundColor="@color/bs_card_bg"
+            app:hintTextColor="@color/bs_text_muted">
+            <AutoCompleteTextView
+                android:id="@+id/dropdownProfileGender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:textColor="@color/bs_text_primary"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Faculty Dropdown -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilProfileFaculty"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="32dp"
+            android:hint="Faculty"
+            app:boxStrokeColor="@color/bs_card_border"
+            app:boxBackgroundColor="@color/bs_card_bg"
+            app:hintTextColor="@color/bs_text_muted">
+            <AutoCompleteTextView
+                android:id="@+id/dropdownProfileFaculty"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="none"
+                android:textColor="@color/bs_text_primary"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Save Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveProfile"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Save &amp; Continue"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#E03535"
+            app:cornerRadius="12dp"
+            android:elevation="0dp"/>
+
+    </LinearLayout>
+</ScrollView>
